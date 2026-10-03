@@ -1,0 +1,9 @@
+component,specification
+Eligibility,Eligible at baseline before strategy assignment
+Strategies,Always treat versus never treat
+Assignment,Emulate assignment using measured history
+Time zero,"Same instant eligibility, strategy assignment, and follow-up start"
+Follow-up,Baseline through final scheduled visit
+Outcome,Continuous final outcome Y
+Causal contrast,Per-protocol mean difference
+Analysis,Sequential exchangeability + positivity + consistency; use g-methods

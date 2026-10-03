@@ -1,0 +1,112 @@
+
+0. Hand-checkable causal effect measures
+----------------------------------------
+E[Y^1] = .5*.10 + .5*.30                    0.2000
+E[Y^0] = .5*.05 + .5*.20                    0.1250
+Causal risk difference                      0.0750
+Causal risk ratio                           1.6000
+Causal odds ratio                           1.7500
+Number needed to harm                       13.3333
+
+1. Counterfactuals and point-treatment adjustment
+-------------------------------------------------
+True ATE E[Y1-Y0]                           2.6088
+Randomized difference in means              2.6351
+Confounded observed association             3.4458
+Standardization / parametric g-formula      2.5530
+Inverse-probability weighting               2.5412
+Augmented IPW / doubly robust               2.5467
+AIPW 95% CI lower                           2.5052
+AIPW 95% CI upper                           2.5883
+True ATE when L2=0                          2.0000
+True ATE when L2=1                          3.5000
+Estimated propensity minimum                0.0255
+Estimated propensity maximum                0.9577
+Largest inverse-probability weight          18.7694
+IPW effective sample size                   9334.1066
+
+2. Propensity-score matching
+----------------------------
+True ATT in treated                         2.7305
+1:1 nearest-neighbor propensity ATT         2.6086
+
+3. Interaction requires a joint intervention
+--------------------------------------------
+mu(0,0)                                     0.9945
+mu(1,0)                                     2.0279
+mu(0,1)                                     2.5133
+mu(1,1)                                     5.5141
+Additive interaction contrast               1.9674
+
+4. Bias structures represented by causal diagrams
+-------------------------------------------------
+Confounded crude treatment coefficient      3.0327
+Adjusted for common cause U                 2.0063
+Collider example, do not condition on C     2.0042
+Collider example, after conditioning on C   1.1139
+Adjustment with true confounder             1.9956
+Adjustment with mismeasured confounder      2.6128
+
+4b. Backdoor checks from graph structure
+----------------------------------------
+Confounding DAG, adjust for nothing        False
+Confounding DAG, adjust for L              True
+Collider DAG, adjust for nothing           True
+Collider DAG, adjust for collider C        False
+
+5. G-estimation, one-parameter structural nested mean model
+-----------------------------------------------------------
+True additive treatment effect              2.5000
+G-estimate psi                              2.5175
+
+6. Instrumental variable
+------------------------
+True constant treatment effect              3.0000
+Confounded treatment association            4.1796
+Instrument first stage                      0.2493
+Wald IV estimate                            3.0344
+
+7. Causal survival analysis
+---------------------------
+True risk under A=0                         0.5457
+True risk under A=1                         0.3653
+True risk difference A=1 minus A=0         -0.1805
+G-formula risk difference                  -0.1754
+IP treatment + IPC censoring weighted RD   -0.1665
+
+8. Doubly robust machine learning with 5-fold cross-fitting
+-----------------------------------------------------------
+True ATE                                    1.5000
+Cross-fit AIPW estimate                     1.5285
+95% CI lower                                1.4455
+95% CI upper                                1.6115
+
+9. Time-varying treatment and treatment-confounder feedback
+-----------------------------------------------------------
+True always-treat minus never-treat         4.7000
+Naive regression adjusting for post-A0 L1   3.4770
+Longitudinal g-formula                      4.7102
+Sequential IP weighting                     4.6922
+Sequential g-estimation, simple additive SNMM  4.7085
+G-estimated first-time blip                 2.7263
+G-estimated second-time blip                1.9822
+
+10. Target trial and time zero
+------------------------------
+Naive risk difference using future-defined 'ever treated' -0.3726
+True treatment effect in this simulation    0.0000
+Protocol written to                        target_trial_protocol.csv
+
+11. Interventionist mediation
+-----------------------------
+mu(A=0, mediator distribution under A=0)    0.0281
+mu(A=1, mediator distribution under A=0)    0.9985
+mu(A=1, mediator distribution under A=1)    2.3540
+Interventional direct effect                0.9704
+Interventional indirect effect              1.3555
+Total effect                                2.3259
+Direct + indirect                           2.3259
+
+12. Optional NHEFS example not run. Put nhefs.csv beside this script and rerun.
+
+Saved what_if_results.csv and target_trial_protocol.csv

@@ -1,0 +1,136 @@
+
+1. SWIG generation
+------------------
+Single intervention DOT                          swig_A0_1.dot
+Joint intervention DOT                           swig_A0_1_A1_0.dot
+Dynamic strategy DOT                             swig_dynamic_A1_g1L1.dot
+Joint-intervention outcome label                 Y(A0=1,A1=0)
+Natural A1 under prior A0 intervention           A1(A0=1)
+Dynamic-strategy intervention edge               L1(A0=0) -> A1=g1(L1)
+
+2. Front-door identification
+----------------------------
+True do(A=1) risk                                 0.408559
+True do(A=0) risk                                 0.253523
+True causal risk difference                       0.155036
+Naive observed risk difference                    0.250381
+Front-door risk difference                        0.154806
+
+3. Proximal causal identification, finite binary bridge
+-------------------------------------------------------
+True causal risk difference                       0.171348
+Naive observed risk difference                    0.298175
+Proximal bridge risk difference                   0.174616
+Bridge h_0(C=0)                                   0.006578
+Bridge h_0(C=1)                                   0.489718
+Bridge h_1(C=0)                                   0.110969
+Bridge h_1(C=1)                                   0.742058
+Proxy relevance determinant at A=0                0.188047
+Proxy relevance determinant at A=1                0.206192
+
+4. Quantitative bias analysis
+-----------------------------
+True treatment risk ratio                         1.550000
+Observed confounded risk ratio                    2.440407
+P(U=1|A=1)                                        0.572484
+P(U=1|A=0)                                        0.195494
+Deterministic confounding bias factor             1.579949
+Bias-corrected risk ratio                         1.544612
+Probabilistic QBA median                          1.552434
+Probabilistic QBA 2.5%                            1.271657
+Probabilistic QBA 97.5%                           1.827954
+
+5. Additive SNMM with two parameters
+------------------------------------
+True beta1                                        2.000000
+Estimated beta1                                   1.991721
+True beta2 for A*V                                1.200000
+Estimated beta2 for A*V                           1.219195
+
+6. Multiplicative SNMM
+----------------------
+True beta1                                        0.450000
+Estimated beta1                                   0.442809
+True beta2                                       -0.250000
+Estimated beta2                                  -0.244076
+Maximum final estimating moment                   0.000000
+
+7. Structural nested logistic family and noncollapsibility
+----------------------------------------------------------
+True conditional causal odds ratio                2.225541
+Fitted conditional treatment odds ratio           2.216540
+Marginal causal odds ratio                        1.878299
+
+8. Longitudinal saturated SNMM
+------------------------------
+True psi0 blip through future covariate           1.720000
+Estimated psi0                                    1.707827
+True psi11                                        2.200000
+Estimated psi11                                   2.193781
+True psi12 for A1*L1                              0.500000
+Estimated psi12                                   0.495974
+True psi13 for A1*A0                             -0.400000
+Estimated psi13                                  -0.418031
+True psi14 for A1*A0*L1                           0.300000
+Estimated psi14                                   0.339310
+
+9. CFT and CST structural nested model parameters
+-------------------------------------------------
+Risk under A=0                                    0.080000
+Risk under A=1                                    0.050000
+CFT psi = log risk ratio                         -0.470004
+Survival under A=0                                0.920000
+Survival under A=1                                0.950000
+CST psi = log survival ratio                      0.032088
+
+10. Structural AFT, one-parameter g-estimation
+----------------------------------------------
+True psi                                         -0.400000
+Estimated psi                                    -0.410000
+True survival-time ratio exp(-psi)                1.491825
+Estimated survival-time ratio                     1.506818
+
+11. Structural AFT with effect modification
+-------------------------------------------
+True psi1                                        -0.320000
+Estimated psi1                                   -0.322269
+True psi2                                         0.160000
+Estimated psi2                                    0.158170
+
+12. AFT g-estimation with artificial censoring
+----------------------------------------------
+True psi                                         -0.350000
+Estimated psi                                    -0.346000
+Observed event fraction                           0.626227
+Fraction retained after artificial censoring      0.532573
+
+13. Chapter 23 cross-world mediation formula
+--------------------------------------------
+E[Y(0,M(0))]                                      1.369521
+E[Y(1,M(0))]                                      2.320181
+E[Y(1,M(1))]                                      2.968589
+Pure direct effect                                0.950660
+Total indirect effect                             0.648407
+Pure direct + total indirect                      1.599067
+Total effect                                      1.599067
+Controlled direct effect at M=0                   0.792482
+Controlled direct effect at M=1                   1.302663
+
+14. Separable effects and empirical falsification
+-------------------------------------------------
+Mediation formula from original two-arm trial     2.305412
+Future trial E[Y(n=0,o=1)] if assumptions hold    2.303412
+Difference under valid separability               0.002000
+Separable N effect at O=1                         0.565072
+Separable O effect at N=1                         1.093697
+Future E[Y(n=0,o=1)] if O also affects M          2.575249
+Mismatch that would refute separability story    -0.269837
+
+15. Path-specific front-door effect
+-----------------------------------
+True effect of L through L->A->Y only             0.631550
+Front-door path-specific estimate                 0.632051
+True total effect of setting L in this simulation  1.331550
+Direct-path contribution excluded by path estimand  0.700000
+
+Saved what_if_advanced_results.csv, advanced_verification.csv, qba_samples.csv, swig_examples.csv, and SWIG DOT files

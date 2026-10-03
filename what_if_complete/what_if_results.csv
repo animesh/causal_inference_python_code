@@ -1,0 +1,16 @@
+method,estimate
+true_point_ATE,2.60875
+naive_association,3.4458081742684845
+standardization,2.552953573169663
+IPW,2.5412463216423697
+AIPW,2.5467470019166005
+g_estimation_point,2.5175041732484
+IV_Wald,3.034356852038099
+survival_g_RD,-0.17541063433395054
+survival_IPCW_RD,-0.166549954426635
+true_longitudinal_ATE,4.7
+longitudinal_g_formula,4.710248808075134
+longitudinal_IPW,4.692219251951624
+longitudinal_g_estimation,4.70848827042091
+interventional_direct,0.9703885517564377
+interventional_indirect,1.355486187348262

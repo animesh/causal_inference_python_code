@@ -1,0 +1,15 @@
+method,estimate
+frontdoor_RD,0.15480611629413565
+proximal_RD,0.1746156761824291
+QBA_corrected_RR,1.5446116308311364
+additive_SNMM_beta1,1.9917214230118838
+additive_SNMM_beta2,1.2191949029268039
+multiplicative_SNMM_beta1,0.44280892945381334
+multiplicative_SNMM_beta2,-0.24407630617217085
+longitudinal_SNMM_psi0,1.7078271700991443
+AFT_psi,-0.4099999999999999
+AFT_artificial_censoring_psi,-0.346
+pure_direct_effect,0.9506599789160246
+total_indirect_effect,0.6484074420875574
+separable_cross_mean,2.30541218071229
+path_specific_frontdoor_effect,0.6320506188135901

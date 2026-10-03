@@ -1,0 +1,46 @@
+example,kind,from_or_id,to_or_label
+do(A0=1),node,r::U,U
+do(A0=1),node,r::A0,A0
+do(A0=1),node,f::A0,A0=1
+do(A0=1),node,r::L1,L1(A0=1)
+do(A0=1),node,r::A1,A1(A0=1)
+do(A0=1),node,r::Y,Y(A0=1)
+do(A0=1),edge,r::U,r::A0
+do(A0=1),edge,r::U,r::L1
+do(A0=1),edge,r::U,r::Y
+do(A0=1),edge,f::A0,r::L1
+do(A0=1),edge,f::A0,r::A1
+do(A0=1),edge,r::L1,r::A1
+do(A0=1),edge,r::L1,r::Y
+do(A0=1),edge,r::A1,r::Y
+"do(A0=1,A1=0)",node,r::U,U
+"do(A0=1,A1=0)",node,r::A0,A0
+"do(A0=1,A1=0)",node,f::A0,A0=1
+"do(A0=1,A1=0)",node,r::L1,L1(A0=1)
+"do(A0=1,A1=0)",node,r::A1,A1(A0=1)
+"do(A0=1,A1=0)",node,f::A1,A1=0
+"do(A0=1,A1=0)",node,r::Y,"Y(A0=1,A1=0)"
+"do(A0=1,A1=0)",edge,r::U,r::A0
+"do(A0=1,A1=0)",edge,r::U,r::L1
+"do(A0=1,A1=0)",edge,r::U,r::Y
+"do(A0=1,A1=0)",edge,f::A0,r::L1
+"do(A0=1,A1=0)",edge,f::A0,r::A1
+"do(A0=1,A1=0)",edge,r::L1,r::A1
+"do(A0=1,A1=0)",edge,r::L1,r::Y
+"do(A0=1,A1=0)",edge,f::A1,r::Y
+"g: A0=0, A1=g1(L1)",node,r::U,U
+"g: A0=0, A1=g1(L1)",node,r::A0,A0
+"g: A0=0, A1=g1(L1)",node,f::A0,A0=0
+"g: A0=0, A1=g1(L1)",node,r::L1,L1(A0=0)
+"g: A0=0, A1=g1(L1)",node,r::A1,A1(A0=0)
+"g: A0=0, A1=g1(L1)",node,f::A1,A1=g1(L1)
+"g: A0=0, A1=g1(L1)",node,r::Y,"Y(A0=0,A1=g1(L1))"
+"g: A0=0, A1=g1(L1)",edge,r::U,r::A0
+"g: A0=0, A1=g1(L1)",edge,r::U,r::L1
+"g: A0=0, A1=g1(L1)",edge,r::U,r::Y
+"g: A0=0, A1=g1(L1)",edge,f::A0,r::L1
+"g: A0=0, A1=g1(L1)",edge,f::A0,r::A1
+"g: A0=0, A1=g1(L1)",edge,r::L1,r::A1
+"g: A0=0, A1=g1(L1)",edge,r::L1,r::Y
+"g: A0=0, A1=g1(L1)",edge,f::A1,r::Y
+"g: A0=0, A1=g1(L1)",edge,r::L1,f::A1

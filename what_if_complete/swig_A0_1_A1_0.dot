@@ -1,0 +1,18 @@
+digraph SWIG {
+  rankdir=LR;
+  "r::U" [label="U", shape=ellipse];
+  "r::A0" [label="A0", shape=ellipse];
+  "f::A0" [label="A0=1", shape=box];
+  "r::L1" [label="L1(A0=1)", shape=ellipse];
+  "r::A1" [label="A1(A0=1)", shape=ellipse];
+  "f::A1" [label="A1=0", shape=box];
+  "r::Y" [label="Y(A0=1,A1=0)", shape=ellipse];
+  "r::U" -> "r::A0";
+  "r::U" -> "r::L1";
+  "r::U" -> "r::Y";
+  "f::A0" -> "r::L1";
+  "f::A0" -> "r::A1";
+  "r::L1" -> "r::A1";
+  "r::L1" -> "r::Y";
+  "f::A1" -> "r::Y";
+}
